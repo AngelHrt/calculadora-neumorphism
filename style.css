@@ -1,69 +1,152 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #ecf0f3;
     font-family: sans-serif;
     outline: none;
 }
 
-.container{
+body {
+    background-color: #ecf0f3;
+}
+
+.container {
     height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.calculator{
+.calculator {
     background-color: #ecf0f3;
-    padding: 15px;
-    border-radius: 30px;
-    box-shadow: inset 5px 5px 12px #ffffff,
-                5px 5px 12px rgba(0,0,0,.16);
-    display: grid;
-    grid-template-columns: repeat(4,68px);
 
+    padding: 15px;
+
+    border-radius: 30px;
+
+    box-shadow:
+        inset 5px 5px 12px #ffffff,
+        5px 5px 12px rgba(0, 0, 0, 0.16);
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 68px);
 }
 
-input{
+/* Pantalla */
+
+input {
     grid-column: span 4;
+
     height: 120px;
     width: 260px;
+
     background-color: #ecf0f3;
-    box-shadow: inset -5px -5px 12px #ffffff,
-                inset 5px 5px 12px rgba(0,0,0,.16);
+
+    box-shadow:
+        inset -5px -5px 12px #ffffff,
+        inset 5px 5px 12px rgba(0, 0, 0, 0.16);
+
     border: none;
     border-radius: 30px;
-    color: rgb(70,70,70);
+
+    color: rgb(70, 70, 70);
+
     font-size: 50px;
-    text-align: end;
+    font-weight: 500;
+
+    text-align: right;
+
     margin: auto;
-    /* margin-top: 0px; */
     margin-bottom: 30px;
+
     padding: 20px;
 }
 
-button{
+/* Botones */
+
+button {
     height: 48px;
     width: 48px;
+
     background-color: #ecf0f3;
-    box-shadow: -5px -5px 12px #ffffff,
-                5px 5px 12px rgba(0,0,0,.16);
+
+    box-shadow:
+        -5px -5px 12px #ffffff,
+        5px 5px 12px rgba(0, 0, 0, 0.16);
+
     border: none;
     border-radius: 50%;
+
     margin: 8px;
+
+    color: #464646;
+
     font-size: 16px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.1s;
 }
 
-.equal{
+/* Efecto al presionar */
+
+button:active {
+    box-shadow:
+        inset 5px 5px 12px rgba(0, 0, 0, 0.16),
+        inset -5px -5px 12px #ffffff;
+}
+
+/* Operadores */
+
+.operator {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+
+    color: #ff652f;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* C */
+
+.btn-cl {
+    color: #ff652f;
+}
+
+/* Botón de borrar */
+
+.delete-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-btn img {
+    width: 24px;
+    height: 21px;
+}
+
+/* Botón igual */
+
+.equal {
     width: 115px;
-    color: #FF652F;
-    border-radius: 40px;
-    background-color: #ecf0f3;
-    box-shadow: -5px -5px 12px #ffffff,
-                5px 5px 12px rgba(0,0,0,.16);
-}
 
-.btn-cl{
-    color: #FF652F;
+    background-color: #ecf0f3;
+
+    border-radius: 40px;
+
+    color: #ff652f;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    box-shadow:
+        -5px -5px 12px #ffffff,
+        5px 5px 12px rgba(0, 0, 0, 0.16);
 }
